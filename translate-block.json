@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wecodeart/translate",
+	"title": "Translate",
+	"category": "wca",
+	"description": "Translate website content using Google API.",
+	"keywords": [
+		"translate",
+		"google",
+		"locale"
+	],
+	"icon": "translation",
+	"textdomain": "wecodeart",
+	"attributes": {
+		"flag": {
+			"type": "boolean",
+			"default": false
+		},
+		"label": {
+			"type": "boolean",
+			"default": true
+		},
+		"translations": {
+			"type": "string"
+		},
+		"language": {
+			"type": "string",
+			"default": "code",
+			"enum": [
+				"code",
+				"native",
+				"english"
+			]
+		},
+		"display": {
+			"type": "string",
+			"default": "select",
+			"enum": [
+				"select",
+				"list"
+			]
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"align": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"radius": true,
+			"style": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": false,
+			"__experimentalDefaultControls": {
+				"margin": false,
+				"padding": false
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"interactivity": true,
+		"__experimentalStyles": true,
+		"__experimentalSettings": true
+	},
+	"editorScript": "file:./assets/minified/js/index.min.js",
+	"viewStyle": "file:./assets/minified/css/index.min.css",
+	"viewScriptModule": "file:./translateView.js"
+}
