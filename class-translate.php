@@ -121,9 +121,9 @@ final class Translate extends Dynamic implements Integration {
 
 		\wp_interactivity_config( 'wecodeart/translate', [
 			'flag' 				=> 'boolean',
-			'flagsUrl' 			=> '(string|function)',
+			'flagsUrl' 			=> 'string',
 			'pageLanguage' 		=> 'string',
-			'includedLanguages'	=> '(array|string|function)',
+			'includedLanguages'	=> 'array',
 		] );  
 
 		return wecodeart( 'dom' )::wrap( 'translate-module', [

@@ -51,10 +51,8 @@ const FLAGS_MAP = {
     iw: 'il',       // Israel (Hebrew)
     hi: 'in',       // Hindi (India)
     hmn: 'la',      // Laos (unofficial)  
-    ig: 'ng',       // Nigeria
-    id: 'id',       // Indonesia
-    ga: 'ie',       // Ireland
-    it: 'it',       // Italy
+    ig: 'ng',       // Nigeria 
+    ga: 'ie',       // Ireland 
     ja: 'jp',       // Japan
     jw: 'id',       // Javanese (Indonesia)
     kn: 'in',       // Kannada (India)
