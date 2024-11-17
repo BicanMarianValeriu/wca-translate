@@ -64,11 +64,8 @@ final class Translate extends Dynamic implements Integration {
 	 * @return 	string 	The block markup.
 	 */
 	public function render( array $attributes = [], string $content = '' ): string {
-		require_once ABSPATH . 'wp-admin/includes/translation-install.php';
-
 		$choices 		= [];
-		$current_lang 	= get_prop( wp_get_available_translations(), [ get_option( 'WPLANG' ) ] );
-		$current_code  	= get_prop( $current_lang, [ 'iso', 1 ], 'en' );
+		$current_code  	= explode( '_', get_option( 'WPLANG' ) )[0];
 		$translations   = explode( ' ', get_prop( $attributes, [ 'translations' ], '' ) );
 		$available 		= array_intersect_key( self::get_languages(), array_flip( [ $current_code, ...$translations ] ) );
 		$translate_id 	= get_prop( $attributes, [ 'id' ], wp_unique_id( 'wp-translate-' ) );
@@ -104,7 +101,8 @@ final class Translate extends Dynamic implements Integration {
 				'choices' 	=> $choices,
 				'attrs'		=> [
 					'class'					=> 'form-select form-select-sm notranslate',
-					'data-wp-on--change'	=> 'actions.updateLanguage'
+					'data-wp-on--change'	=> 'actions.updateLanguage',
+					'aria-label'			=> __( 'Change language', 'wecodeart' )
 				]
 			], false );
 			break;
