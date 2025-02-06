@@ -1,1 +1,1 @@
-body{top:0!important}:is(.skiptranslate,span[id^=wp-translate-]){display:none!important}.wp-block-wecodeart-translate .form-select{max-width:max-content}
+body{top:0!important}:is(.skiptranslate,span[id^=wp-translate-]),:is(.skiptranslate,span[id^=wp-translate-])+style+div{display:none!important}.wp-block-wecodeart-translate .form-select{max-width:max-content}
