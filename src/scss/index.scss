@@ -7,6 +7,10 @@ body {
     span[id^="wp-translate-"]
 ) {
     display: none!important;
+
+    & + style + div {
+        display: none!important;
+    }
 }
 
 .wp-block-wecodeart-translate {
