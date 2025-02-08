@@ -10,7 +10,7 @@ span[id^=wp-translate-]) {
   display: none !important;
 }
 :is(.skiptranslate,
-span[id^=wp-translate-]) + style + div {
+span[id^=wp-translate-]) ~ div[class^=VIpgJd-] {
   display: none !important;
 }
 

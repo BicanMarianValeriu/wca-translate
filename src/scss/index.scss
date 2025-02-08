@@ -8,7 +8,7 @@ body {
 ) {
     display: none!important;
 
-    & + style + div {
+    & ~ div[class^=VIpgJd-] {
         display: none!important;
     }
 }
